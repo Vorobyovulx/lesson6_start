@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCellID" rowHeight="325" id="KGk-i7-Jjw" customClass="WeatherCell" customModule="GeekWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="325"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="467" height="325"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEG-Kl-Vya">
+                        <rect key="frame" x="212.5" y="111" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-Bs-1Ur">
+                        <rect key="frame" x="212.5" y="193" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-l7-vLb">
+                        <rect key="frame" x="211" y="140" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="CH8-Sc-ehT"/>
+                            <constraint firstAttribute="height" constant="45" id="hrj-Ed-Wgy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3C-4r-XEh">
+                        <rect key="frame" x="212.5" y="222" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gXR-l7-vLb" firstAttribute="top" secondItem="GEG-Kl-Vya" secondAttribute="bottom" constant="8" id="7P1-vV-Drq"/>
+                    <constraint firstItem="LCl-Bs-1Ur" firstAttribute="top" secondItem="gXR-l7-vLb" secondAttribute="bottom" constant="8" id="RUG-fz-Fgv"/>
+                    <constraint firstItem="GEG-Kl-Vya" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="av5-K3-OvV"/>
+                    <constraint firstItem="r3C-4r-XEh" firstAttribute="top" secondItem="LCl-Bs-1Ur" secondAttribute="bottom" constant="8" id="clb-kH-dC4"/>
+                    <constraint firstItem="gXR-l7-vLb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eah-an-9CS"/>
+                    <constraint firstItem="gXR-l7-vLb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nb2-3v-1ae"/>
+                    <constraint firstItem="LCl-Bs-1Ur" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="oeU-0H-jCz"/>
+                    <constraint firstItem="r3C-4r-XEh" firstAttribute="centerX" secondItem="gXR-l7-vLb" secondAttribute="centerX" id="rbD-5t-gMf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="condition" destination="r3C-4r-XEh" id="XMP-AU-pQD"/>
+                <outlet property="dayLabel" destination="GEG-Kl-Vya" id="j3k-UH-rhc"/>
+                <outlet property="maxTemp" destination="LCl-Bs-1Ur" id="eEF-ED-36V"/>
+                <outlet property="weatherImageView" destination="gXR-l7-vLb" id="zWT-nv-tgV"/>
+            </connections>
+            <point key="canvasLocation" x="54.347826086956523" y="199.88839285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
